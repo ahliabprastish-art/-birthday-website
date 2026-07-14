@@ -1,0 +1,88 @@
+import express from "express";
+import path from "path";
+import { createServer as createViteServer } from "vite";
+import { GoogleGenAI } from "@google/genai";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+async function startServer() {
+  const app = express();
+  const PORT = 3000;
+
+  app.use(express.json());
+
+  // Initialize Gemini API client
+  const getGeminiClient = () => {
+    const apiKey = process.env.GEMINI_API_KEY;
+    if (!apiKey || apiKey === "MY_GEMINI_API_KEY") {
+      return null;
+    }
+    return new GoogleGenAI({
+      apiKey: apiKey,
+      httpOptions: {
+        headers: {
+          'User-Agent': 'aistudio-build',
+        }
+      }
+    });
+  };
+
+  // API route to generate a romantic, personalized wish
+  app.post("/api/wish", async (req, res) => {
+    try {
+      const { partnerName, traits, senderName, tone } = req.body;
+      
+      const ai = getGeminiClient();
+      if (!ai) {
+        // Elegant default fallback if API key is not configured
+        return res.json({
+          success: true,
+          text: `To my dearest ${partnerName || "Special Someone"},\n\nEvery single day with you feels like discovering a new star in the night sky. Your warmth, your laugh, and your beautiful soul make my world infinitely brighter. On this special day, I wish you all the magic, laughter, and pure happiness that you bring into my life every moment.\n\nHappy Birthday, my love. Forever and always.\n\nWith all my heart,\n${senderName || "Your Secret Admirer"}`
+        });
+      }
+
+      const prompt = `Write a deeply heartfelt, beautiful, romantic and modern 2025 birthday wish/poem for my ${tone === 'crush' ? 'crush' : 'partner'} named "${partnerName || 'Special Someone'}".
+      Here are some of their special qualities and traits: "${traits || 'amazing, kind, smart'}".
+      The tone of the message should be: "${tone || 'deeply romantic and poetic'}".
+      Signed from: "${senderName || 'Your Love'}".
+      Ensure the output is beautifully formatted with line breaks, poetic, emotionally moving, and doesn't contain any robotic markdown headers or boilerplate text. Just the heartfelt wish itself. Keep it between 100 to 200 words.`;
+
+      const response = await ai.models.generateContent({
+        model: "gemini-3.5-flash",
+        contents: prompt,
+      });
+
+      res.json({
+        success: true,
+        text: response.text,
+      });
+    } catch (error: any) {
+      console.error("Gemini API Error:", error);
+      res.status(500).json({ error: error.message || "Failed to generate wish" });
+    }
+  });
+
+  // Vite middleware for development
+  if (process.env.NODE_ENV !== "production") {
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
+    });
+    app.use(vite.middlewares);
+  } else {
+    const distPath = path.join(process.cwd(), 'dist');
+    app.use(express.static(distPath));
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  }
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
+}
+
+startServer().catch((err) => {
+  console.error("Failed to start server: ", err);
+});
