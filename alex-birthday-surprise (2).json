@@ -1,0 +1,131 @@
+{
+  "id": "sweetheart-2026",
+  "boyfriendName": "Alex",
+  "senderName": "Your Sweetheart",
+  "birthdayDate": "2026-10-06T01:53",
+  "passwordEnabled": false,
+  "password": "1024",
+  "passwordHint": "The date we first officially held hands or my nickname for you ❤️",
+  "theme": "rose_romance",
+  "musicTrack": "romantic_lofi",
+  "musicTitle": "Sunset Cherry Blossoms & Sweet Lofi Beats",
+  "level1": {
+    "headline": "Happy Birthday, My Love!",
+    "subheadline": "To the boy who makes my everyday world feel like my favorite anime romance scene.",
+    "introParagraph": "Today is all about you! Every smile you give me, every late-night conversation, and every little moment we share is my greatest treasure. Blow out the candles and make a secret wish!",
+    "wishes": [
+      "May all your biggest dreams and goals come true this year!",
+      "May your days be filled with endless laughter and good food.",
+      "Always remember how loved, appreciated, and cherished you are by me."
+    ],
+    "candleCount": 3,
+    "chibiSticker": "/src/assets/images/cute_anime_chibi_roses_1791074196076.jpg"
+  },
+  "level2": {
+    "title": "Our Scrapbook of Precious Memories",
+    "subtitle": "A sweet stroll through the chapters and moments that made us fall in love",
+    "memories": [
+      {
+        "id": "mem-1",
+        "title": "The First Time We Met",
+        "date": "October 14",
+        "image": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80",
+        "caption": "My heart was beating so fast when you smiled and waved at me. That was the exact second I knew you were someone extraordinarily special.",
+        "tag": "First Chapter"
+      },
+      {
+        "id": "mem-2",
+        "title": "Our Rainy Day Coffee & Manga Date",
+        "date": "December 02",
+        "image": "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80",
+        "caption": "Huddled in the corner cafe watching the rain drizzle down the glass while sharing warm matcha lattes and listening to your laughter.",
+        "tag": "Cozy Days"
+      },
+      {
+        "id": "mem-3",
+        "title": "Stargazing Under the Night Sky",
+        "date": "April 19",
+        "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
+        "caption": "Wrapped in one big jacket, looking up at the constellations. You pointed at the brightest star, but honestly, I was just looking at you.",
+        "tag": "Under The Stars"
+      },
+      {
+        "id": "mem-4",
+        "title": "Birthday Boy Smiling Bright",
+        "date": "Always & Forever",
+        "image": "/src/assets/images/anime_birthday_romance_1791074182203.jpg",
+        "caption": "Here is to another year of growing together, cheering for you, and celebrating every triumph side by side.",
+        "tag": "Special Day"
+      }
+    ]
+  },
+  "level3": {
+    "title": "How Well Do You Know Our Story?",
+    "subtitle": "A quick quiz to test your memory, birthday boy! Let us see if you score 100%!",
+    "passingScore": 3,
+    "rewardTitle": "Certified Best Boyfriend in the Universe! 🏆",
+    "rewardMessage": "You passed with flying colors! You win endless hugs, unlimited forehead kisses, and your favorite birthday dinner tonight!",
+    "questions": [
+      {
+        "id": "q-1",
+        "question": "Who said \"I love you\" first?",
+        "options": [
+          "You did, with a cute shy smile",
+          "I blurted it out first!",
+          "We said it at the exact same second",
+          "The cafe cat whispered it for us"
+        ],
+        "correctIndex": 1,
+        "cuteReaction": "Hehe, yes! I was so nervous I could barely breathe, but I just could not keep it inside anymore!"
+      },
+      {
+        "id": "q-2",
+        "question": "What is our go-to comfort food when we binge-watch anime together?",
+        "options": [
+          "Spicy ramen & gyoza",
+          "Pepperoni pizza",
+          "Strawberries & chocolate fondue",
+          "Boba milk tea and crispy chicken"
+        ],
+        "correctIndex": 0,
+        "cuteReaction": "Spot on! Extra spicy for you and extra broth for me! Slurping ramen while watching our favorite shows is peak happiness."
+      },
+      {
+        "id": "q-3",
+        "question": "What is my favorite thing about you?",
+        "options": [
+          "Your warm hugs",
+          "How passionate you get about your hobbies",
+          "Your adorable laugh",
+          "All of the above and a million more things!"
+        ],
+        "correctIndex": 3,
+        "cuteReaction": "Every single thing about you. From your gentle kindness to your cute sleepy morning face, you are my favorite person."
+      }
+    ]
+  },
+  "level4": {
+    "title": "A Cinema Moment Dedicated to You",
+    "subtitle": "Turn down the lights, relax, and watch this sweet montage made just for you",
+    "videoType": "youtube",
+    "videoUrl": "https://www.youtube.com/embed/jfKfPfyJRdk",
+    "dedicationText": "Every time this melody plays, it feels like all the little moments we shared are floating gently like cherry blossoms in spring.",
+    "quotes": [
+      "“In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine.”",
+      "“I fell in love the way you fall asleep: slowly, and then all at once.”",
+      "“You are my today and all of my tomorrows.”"
+    ]
+  },
+  "level5": {
+    "title": "A Secret Letter Just for You",
+    "subtitle": "Scroll to the very bottom to discover the hidden letter sealed with rose petals...",
+    "envelopeColor": "#f43f5e",
+    "waxSealColor": "#be123c",
+    "letterSalutation": "To My Dearest Birthday Boy,",
+    "letterBody": "From the moment you entered my life, everything turned a little brighter, warmer, and so much sweeter. \n\nI made this entire page because mere words on a card could never hold all the love and admiration I have for you. You have been my greatest comfort on hard days, my loudest cheerleader on good days, and the person who always knows how to make me laugh until my cheeks hurt.\n\nAs you step into this new year of your life, I want you to know how deeply proud I am of the man you are becoming. Never lose that gentle kindness, your infectious curiosity, and your beautiful heart.\n\nThank you for loving me, for holding my hand through everything, and for being my favorite adventure. Happy Birthday, my love. Today, tomorrow, and for all the birthdays to come, I will always be right here cheering for you.",
+    "letterClosing": "Forever & Always Yours,",
+    "senderSign": "Your Sweetheart ❤️",
+    "postScript": "P.S. There is also a real-life birthday surprise waiting for you when we see each other today! Get ready!",
+    "revealedByDefault": false
+  }
+}
